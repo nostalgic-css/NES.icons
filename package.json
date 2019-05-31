@@ -44,6 +44,10 @@
     "postcss-cli": "^6.1.2",
     "postcss-node-sass": "^2.1.8",
     "postcss-preset-env": "^6.6.0",
+    "prettier": "^1.17.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.7.0",
     "webfont": "^9.0.0"
   }
 }

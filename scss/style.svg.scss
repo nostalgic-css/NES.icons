@@ -1,10 +1,10 @@
 @import '../css/nes-icons-variables.scss';
 
 $sizes: (
-  2x: 2em,
-  3x: 3em,
-  4x: 4em,
-  5x: 5em,
+  '2x': 2em,
+  '3x': 3em,
+  '4x': 4em,
+  '5x': 5em,
 );
 
 [data-nes-icon] {

@@ -2,10 +2,10 @@
 @import '../css/nes-icons-variables.scss';
 
 $sizes: (
-  2x: 2em,
-  3x: 3em,
-  4x: 4em,
-  5x: 5em,
+  '2x': 2em,
+  '3x': 3em,
+  '4x': 4em,
+  '5x': 5em,
 );
 
 .nes-icon {
@@ -17,7 +17,7 @@ $sizes: (
   text-rendering: auto;
   line-height: 1;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: none;
 
   &-fixed-width {
     text-align: center;
