@@ -1,13 +1,14 @@
 {
   "name": "nes.icons",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "NES.icons is an icon library designed to mimic the look of icons on an NES.",
   "main": "css/nes-icons.css",
   "sass": "scss/nes-icons.scss",
   "style": "css/nes-icons.css",
   "scripts": {
     "compile": "./scripts/compile.js",
-    "watch": "./scripts/compile.js -w"
+    "watch": "./scripts/compile.js -w",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "character",
@@ -22,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nostalgic-css/NES.icons.git"
+    "url": "https://github.com/nostalgic-css/NES.icons.git"
   },
   "author": "Trezy <tre@trezy.com> (https://trezy.com)",
   "license": "MIT",
@@ -48,6 +49,7 @@
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.7.0",
-    "webfont": "^9.0.0"
+    "webfont": "^9.0.0",
+    "semantic-release": "^15.13.12"
   }
 }
