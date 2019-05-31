@@ -1,0 +1,103 @@
+{
+  "aliases": {
+    "square": [
+      "stop"
+    ]
+  },
+
+  "iconsByCategory": {
+    "Alert": [
+      "exclamation",
+      "exclamation-circle",
+      "exclamation-triangle",
+      "exclamation-triangle-alt"
+    ],
+    "Arrows": [
+      "caret-down",
+      "caret-left",
+      "caret-right",
+      "caret-up"
+    ],
+    "Audio & Video": [
+      "circle",
+      "pause",
+      "play",
+      "stop"
+    ],
+    "Brands": [
+      "discord",
+      "facebook",
+      "facebook-square",
+      "github",
+      "github-square",
+      "linkedin",
+      "twitch",
+      "twitch-square",
+      "twitter",
+      "twitter-square",
+      "youtube",
+      "youtube-square"
+    ],
+    "Computers": [
+      "database"
+    ],
+    "Controllers": [
+      "nes",
+      "nes-jp",
+      "snes"
+    ],
+    "Files": [
+      "file",
+      "folder"
+    ],
+    "Images": [
+      "eye",
+      "eye-slash"
+    ],
+    "Interfaces": [
+      "bars",
+      "check",
+      "check-circle",
+      "check-square",
+      "search",
+      "search-minus",
+      "search-plus",
+      "trophy"
+    ],
+    "Objects": [
+      "bomb"
+    ],
+    "Mathematics": [
+      "times"
+    ],
+    "Shapes": [
+      "cloud",
+      "square"
+    ],
+    "Social": [
+      "comment",
+      "envelope",
+      "heart",
+      "social",
+      "thumbs-up",
+      "user",
+      "users"
+    ],
+    "Spinners": [
+      "cog"
+    ],
+    "Square": [
+      "check-square",
+      "facebook-square",
+      "github-square",
+      "square",
+      "twitch-square",
+      "twitter-square",
+      "youtube-square"
+    ],
+    "Status": [
+      "ban",
+      "calendar"
+    ]
+  }
+}
