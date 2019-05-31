@@ -1,0 +1,29 @@
+@import '../css/nes-icons-variables.scss';
+
+$sizes: (
+  2x: 2em,
+  3x: 3em,
+  4x: 4em,
+  5x: 5em,
+);
+
+[data-nes-icon] {
+  background-size: cover;
+  color: currentColor;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+
+  > svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  @each $sizeName, $sizeValue in $sizes {
+    &[data-nes-icon-size='#{$sizeName}'] {
+      height: $sizeValue;
+      width: $sizeValue;
+    }
+  }
+}

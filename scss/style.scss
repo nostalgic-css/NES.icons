@@ -1,0 +1,38 @@
+@import './font-face.scss';
+@import '../css/nes-icons-variables.scss';
+
+$sizes: (
+  2x: 2em,
+  3x: 3em,
+  4x: 4em,
+  5x: 5em,
+);
+
+.nes-icon {
+  display: inline-block;
+  font-family: 'nes-icons';
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &-fixed-width {
+    text-align: center;
+    width: 1.25em;
+  }
+
+  @each $sizeName, $sizeValue in $sizes {
+    &-#{$sizeName} {
+      font-size: $sizeValue;
+    }
+  }
+
+  @each $iconName, $iconGlyph in $nes-icons {
+    &-#{$iconName}::before {
+      content: $iconGlyph;
+    }
+  }
+}
