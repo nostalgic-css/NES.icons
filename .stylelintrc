@@ -8,6 +8,7 @@
   ],
   "rules": {
     "at-rule-no-unknown": null,
+    "comment-whitespace-inside": null,
     "font-family-no-missing-generic-family-keyword": null,
     "string-quotes": "single"
   }
