@@ -114,7 +114,7 @@ jobs:
 
       - run:
           name: Lint styles
-          command: npx stylelint -- --fix
+          command: npx stylelint scss/*
 
   # test:
   #   <<: *defaults
