@@ -1,2 +1,6 @@
 .DS_Store
-*.aseprite
+yarn-error.log
+
+css/
+fonts/
+node_modules/
