@@ -25,12 +25,10 @@ Our `package.json` contains some additional metadata under the following keys:
 Import the CSS via a `<link />` element:
 
 ```html
-<!-- minify -->
-<link href="https://unpkg.com/nes.icons@1.0.2/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
 <link href="https://unpkg.com/nes.icons@latest/css/nes.min.css" rel="stylesheet" />
-<!-- core style only -->
-<link href="https://unpkg.com/nes.icons/css/nes-core.min.css" rel="stylesheet" />
+<!-- specific version -->
+<link href="https://unpkg.com/nes.icons@<VERSION>/css/nes.min.css" rel="stylesheet" />
 ```
 
 ## Usage
