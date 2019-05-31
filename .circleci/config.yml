@@ -92,7 +92,7 @@ jobs:
 
       - run:
           name: Build the Framework
-          command: npm run build
+          command: npm run compile
 
       - save_cache:
           name: Save Build Cache
