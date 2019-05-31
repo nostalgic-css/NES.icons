@@ -99,11 +99,13 @@ jobs:
           key: build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - css
+            - fonts
 
       - persist_to_workspace:
           root: .
           paths:
             - css
+            - fonts
 
   lint:
     <<: *defaults
