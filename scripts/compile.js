@@ -230,16 +230,6 @@ const createStylesheetsTask = new Listr([
       },
     ]),
   },
-
-  // {
-  //   title: 'Log usageInfo',
-  //   skip: ctx => !ctx.usageInfo.length,
-  //   task: ctx => {
-  //     console.log('===== ctx.usageInfo =====')
-  //     console.log(ctx.usageInfo)
-  //     console.log('=========================')
-  //   },
-  // },
 ], {
   renderer: (() => {
     if (program.verbose) {
