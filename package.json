@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/nostalgic-css/NES.icons#readme",
   "devDependencies": {
+    "@semantic-release/exec": "^3.3.2",
     "cheerio": "^1.0.0-rc.3",
     "commander": "^2.20.0",
     "doiuse": "^4.2.0",
@@ -46,10 +47,10 @@
     "postcss-node-sass": "^2.1.8",
     "postcss-preset-env": "^6.6.0",
     "prettier": "^1.17.1",
+    "semantic-release": "^15.13.12",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.7.0",
-    "webfont": "^9.0.0",
-    "semantic-release": "^15.13.12"
+    "webfont": "^9.0.0"
   }
 }
