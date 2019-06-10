@@ -25,33 +25,29 @@ $sizes: (
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: none;
 
-  &-fixed-width {
-    text-align: center;
-    width: 1.25em;
-  }
-
   @each $rotation in (90, 180, 270) {
-    &-rotate-#{$rotation} {
+    &&-rotate-#{$rotation} {
       transform: rotate(#{$rotation}deg);
+      transform-origin: 50% 50%;
     }
   }
 
-  &-flip-horizontal {
+  &&-flip-horizontal {
     transform: scale(-1, 1);
   }
 
-  &-flip-vertical {
+  &&-flip-vertical {
     transform: scale(1, -1);
   }
 
   @each $sizeName, $sizeValue in $sizes {
-    &-#{$sizeName} {
+    &&-#{$sizeName} {
       font-size: $sizeValue;
     }
   }
 
   @each $iconName, $iconGlyph in $nes-icons {
-    &-#{$iconName}::before {
+    &&-#{$iconName}::before {
       content: $iconGlyph;
     }
   }
