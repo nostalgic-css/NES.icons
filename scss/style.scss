@@ -31,16 +31,16 @@ $sizes: (
   }
 
   @each $rotation in (90, 180, 270) {
-    &-rotate-#{$rotation}:before {
+    &-rotate-#{$rotation}::before {
       transform: rotate(#{$rotation}deg);
     }
   }
 
-  &-flip-horizontal:before {
+  &-flip-horizontal::before {
     transform: scale(-1, 1);
   }
 
-  &-flip-vertical:before {
+  &-flip-vertical::before {
     transform: scale(1, -1);
   }
 
