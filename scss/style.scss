@@ -46,7 +46,7 @@ $sizes: (
   }
 
   @each $sizeName, $sizeValue in $sizes {
-    &.#{$sizeName} {
+    &.size-#{$sizeName} {
       font-size: $sizeValue;
     }
   }
