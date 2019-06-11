@@ -32,6 +32,11 @@ $sizes: (
     }
   }
 
+  &&-flip-horizontal,
+  &&-flip-vertical {
+    transform-origin: 50% 50%;
+  }
+
   &&-flip-horizontal {
     transform: scale(-1, 1);
   }
