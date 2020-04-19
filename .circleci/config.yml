@@ -87,14 +87,12 @@ jobs:
           name: Save Build Cache
           key: build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - css
-            - fonts
+            - dist
 
       - persist_to_workspace:
           root: .
           paths:
-            - css
-            - fonts
+            - dist
 
   lint:
     <<: *defaults
