@@ -11,7 +11,7 @@ if (!nextVersion) {
 }
 
 // Update the CSS Package Header
-const CSSFilePath = path.resolve('dist', 'nes-icons.css')
+const CSSFilePath = path.resolve('css', 'nes-icons.css')
 let CSSFile = fs.readFileSync(CSSFilePath, 'utf8')
 
 CSSFile = CSSFile.replace(/^ {2}Version: development/m, `  Version: ${nextVersion}`)
