@@ -22,7 +22,9 @@ const scssFunctions = require('../scripts/scssFunctions')
 
 
 // Promisify non-promisables
+const copyFileAsync = util.promisify(fs.copyFile)
 const mkdirAsync = util.promisify(fs.mkdir)
+const readdirAsync = util.promisify(fs.readdir)
 const sassRenderAsync = util.promisify(sass.render)
 const writeFileAsync = util.promisify(fs.writeFile)
 
@@ -34,6 +36,7 @@ const writeFileAsync = util.promisify(fs.writeFile)
 const isProduction = process.env.NODE_ENV === 'production'
 const outputDestination = path.resolve('dist')
 const outputFilename = path.resolve(outputDestination, 'nes-icons')
+const sassDirectory = path.resolve('scss')
 const variableOutputFilename = path.resolve(outputDestination, 'nes-icons-variables')
 
 
@@ -51,7 +54,7 @@ program.parse(process.argv)
 
 
 
-const createFoldersTask = new Listr([
+const prepareFilesTask = new Listr([
   {
     title: 'Create folders',
     task: () => {
@@ -65,6 +68,19 @@ const createFoldersTask = new Listr([
           },
         },
       ])
+    },
+  },
+
+  {
+    title: 'Copy Sass to `dist/`',
+    task: async () => {
+      const sassFiles = await readdirAsync(sassDirectory)
+      await Promise.all(sassFiles.map(filename => {
+        const inputFile = path.resolve(sassDirectory, filename)
+        const outputFile = path.resolve(outputDestination, filename)
+
+        return copyFileAsync(inputFile, outputFile)
+      }))
     },
   },
 ])
@@ -153,8 +169,8 @@ const createStylesheetsTask = new Listr([
       {
         title: 'Compile Sass',
         task: ctx => {
-          ctx.nodeSassResults = sass.renderSync({
-            file: path.resolve('scss', 'style.scss'),
+          ctx.sassResults = sass.renderSync({
+            file: path.resolve(outputDestination, 'style.scss'),
             functions: scssFunctions,
             outputStyle: 'expanded',
           })
@@ -170,11 +186,11 @@ const createStylesheetsTask = new Listr([
               browsers: ['> 1%'],
               onFeatureUsage: usageInfo => (ctx.usageInfo || (ctx.usageInfo = [])).push(usageInfo),
             }),
-          ]).process(ctx.nodeSassResults.css, {
+          ]).process(ctx.sassResults.css, {
             from: `${outputFilename}.css`,
             map: {
               inline: false,
-              prev: ctx.nodeSassResults.map,
+              prev: ctx.sassResults.map,
             },
             to: `${outputFilename}.css`,
           })
@@ -239,11 +255,17 @@ const createStylesheetsTask = new Listr([
 
 
 ;(async () => {
-  await Promise.all([
-    createFoldersTask.run(),
-    createWebfontsTask.run(),
-    createStylesheetsTask.run(),
-  ]).catch(error => console.error(error))
+  const run = async () => {
+    try {
+      await prepareFilesTask.run()
+      await createWebfontsTask.run()
+      await createStylesheetsTask.run()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  await run()
 
   if (program.watch) {
     const iconsPath = path.resolve('icons')
@@ -271,10 +293,7 @@ const createStylesheetsTask = new Listr([
       console.log('Detected a change to icons. Rebuilding...')
 
       try {
-        await Promise.all([
-          createWebfontsTask.run(),
-          createStylesheetsTask.run(),
-        ]).catch(error => console.error(error))
+        await run()
       } catch (error) {
         console.error(error)
       }
