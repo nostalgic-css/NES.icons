@@ -1,5 +1,6 @@
 .DS_Store
 yarn-error.log
 
-dist/
+css/
+fonts/
 node_modules/

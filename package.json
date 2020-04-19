@@ -2,9 +2,9 @@
   "name": "nes.icons",
   "version": "0.0.0-development",
   "description": "NES.icons is an icon library designed to mimic the look of icons on an NES.",
-  "main": "dist/nes-icons.css",
-  "sass": "dist/nes-icons.scss",
-  "style": "dist/nes-icons.css",
+  "main": "css/nes-icons.css",
+  "sass": "scss/nes-icons.scss",
+  "style": "css/nes-icons.css",
   "scripts": {
     "compile": "./scripts/compile.js",
     "watch": "./scripts/compile.js -w",

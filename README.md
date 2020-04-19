@@ -26,9 +26,9 @@ Import the CSS via a `<link />` element:
 
 ```html
 <!-- latest -->
-<link href="https://unpkg.com/nes.icons@latest/dist/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.icons@latest/css/nes.min.css" rel="stylesheet" />
 <!-- specific version -->
-<link href="https://unpkg.com/nes.icons@<VERSION>/dist/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.icons@<VERSION>/css/nes.min.css" rel="stylesheet" />
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ The recommended font for NES.css is [Press Start 2P][press-start-2p-font]. Howev
 
 ```html
 <head>
-    <link href="https://unpkg.com/nes.icons/dist/nes-icons.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.icons/css/nes-icons.css" rel="stylesheet" />
 </head>
 ```
 
