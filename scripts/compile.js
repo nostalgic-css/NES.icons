@@ -6,7 +6,7 @@ const Listr = require('listr')
 const path = require('path')
 const postcss = require('postcss')
 const program = require('commander')
-const sass = require('node-sass')
+const sass = require('sass')
 const util = require('util')
 const webfont = require("webfont").default
 
@@ -162,8 +162,8 @@ const createStylesheetsTask = new Listr([
     task: () => new Listr([
       {
         title: 'Compile Sass',
-        task: async ctx => {
-          ctx.nodeSassResults = await sassRenderAsync({
+        task: ctx => {
+          ctx.nodeSassResults = sass.renderSync({
             file: path.resolve('scss', 'style.scss'),
             functions: scssFunctions,
             outputStyle: 'expanded',
