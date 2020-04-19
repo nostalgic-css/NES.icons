@@ -48,7 +48,8 @@
     ],
     "Files": [
       "file",
-      "folder"
+      "folder",
+      "note"
     ],
     "Images": [
       "eye",
@@ -59,13 +60,15 @@
       "check",
       "check-circle",
       "check-square",
+      "note",
       "search",
       "search-minus",
       "search-plus",
       "trophy"
     ],
     "Objects": [
-      "bomb"
+      "bomb",
+      "note"
     ],
     "Mathematics": [
       "times"
@@ -78,6 +81,7 @@
       "comment",
       "envelope",
       "heart",
+      "note",
       "social",
       "thumbs-up",
       "user",
