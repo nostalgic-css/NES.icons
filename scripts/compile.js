@@ -32,8 +32,7 @@ const writeFileAsync = util.promisify(fs.writeFile)
 
 // Useful constants
 const isProduction = process.env.NODE_ENV === 'production'
-const fontOutputDestination = path.resolve('fonts')
-const outputDestination = path.resolve('css')
+const outputDestination = path.resolve('dist')
 const outputFilename = path.resolve(outputDestination, 'nes-icons')
 const variableOutputFilename = path.resolve(outputDestination, 'nes-icons-variables')
 
@@ -58,23 +57,14 @@ const createFoldersTask = new Listr([
     task: () => {
       return new Listr([
         {
-          title: '`css/`',
+          title: '`dist/`',
           task: async () => {
             try {
-              await mkdirAsync('css')
+              await mkdirAsync('dist')
             } catch (error) {}
           },
         },
-
-        {
-          title: '`fonts/`',
-          task: async () => {
-            try {
-              await mkdirAsync('fonts')
-            } catch (error) {}
-          },
-        },
-      ], { concurrent: true })
+      ])
     },
   },
 ])
@@ -99,7 +89,7 @@ const createWebfontsTask = new Listr([
           {
             title: 'Save',
             task: ctx => new Listr(['eot', 'svg', 'ttf', 'woff', 'woff2'].map(format => {
-              const destination = path.resolve(fontOutputDestination, `nes-icons.${format}`)
+              const destination = path.resolve(outputDestination, `nes-icons.${format}`)
               return {
                 title: format,
                 task: async () => writeFileAsync(destination, ctx.webfontResults[format]),
