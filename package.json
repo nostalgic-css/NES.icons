@@ -46,7 +46,7 @@
     "postcss-preset-env": "^6.6.0",
     "prettier": "^1.17.1",
     "sass": "^1.26.3",
-    "semantic-release": "^15.13.12",
+    "semantic-release": "^17.0.6",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.7.0",
