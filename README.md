@@ -2,6 +2,10 @@ NES.icons is an **NES-style (8bit-like)** icon library.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
+### Demo
+
+[nes.icons demo](https://codepen.io/trezy/pen/qBONKqa)
+
 ## Installation
 
 ### Styles
@@ -26,9 +30,9 @@ Import the CSS via a `<link />` element:
 
 ```html
 <!-- latest -->
-<link href="https://unpkg.com/nes.icons@latest/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.icons@latest/css/nes-icons.min.css" rel="stylesheet" />
 <!-- specific version -->
-<link href="https://unpkg.com/nes.icons@<VERSION>/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.icons@<VERSION>/css/nes-icons.min.css" rel="stylesheet" />
 ```
 
 ## Usage
@@ -47,28 +51,26 @@ Then use any of the icons in your project!
 
 
 ```html
-<i class="nes-icon nes-icon-eye"></i>
-<i class="nes-icon nes-icon-eye-slash"></i>
-<i class="nes-icon nes-icon-discord"></i>
+<i class="nes-icon eye"></i>
+<i class="nes-icon eye-slash"></i>
+<i class="nes-icon discord"></i>
 ```
 
 ## Browser Support
 
-NES.css is compatible with the newest version of the following browsers:
+    NES.css is compatible with the newest version of the following browsers:
 * Chrome
 * Firefox
 * Safari
+* Edge
 
 Untested
-* IE/Edge
+* IE
 
 ## Copyright and license
 
 Code and documentation copyright 2019 [Trezy.com][trezy.com]. Code released under the MIT License. Docs released under Creative Commons.
 
-## Development
-
-If you'd like to help us out with the project, we welcome contributions of all types! Check out our [`CONTRIBUTING.md`][contributing-document] for more details on how you can help make NES.css amazing!
 
 
 
