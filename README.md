@@ -26,9 +26,9 @@ Import the CSS via a `<link />` element:
 
 ```html
 <!-- latest -->
-<link href="https://unpkg.com/nes.icons@latest/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.icons@latest/css/nes-icons.min.css" rel="stylesheet" />
 <!-- specific version -->
-<link href="https://unpkg.com/nes.icons@<VERSION>/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.icons@<VERSION>/css/nes-icons.min.css" rel="stylesheet" />
 ```
 
 ## Usage
@@ -47,14 +47,14 @@ Then use any of the icons in your project!
 
 
 ```html
-<i class="nes-icon nes-icon-eye"></i>
-<i class="nes-icon nes-icon-eye-slash"></i>
-<i class="nes-icon nes-icon-discord"></i>
+<i class="nes-icon eye"></i>
+<i class="nes-icon eye-slash"></i>
+<i class="nes-icon discord"></i>
 ```
 
 ## Browser Support
 
-NES.css is compatible with the newest version of the following browsers:
+    NES.css is compatible with the newest version of the following browsers:
 * Chrome
 * Firefox
 * Safari
