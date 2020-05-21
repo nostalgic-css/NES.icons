@@ -2,6 +2,10 @@ NES.icons is an **NES-style (8bit-like)** icon library.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
+### Demo
+
+[nes.icons demo](https://codepen.io/trezy/pen/qBONKqa)
+
 ## Installation
 
 ### Styles
@@ -58,17 +62,15 @@ Then use any of the icons in your project!
 * Chrome
 * Firefox
 * Safari
+* Edge
 
 Untested
-* IE/Edge
+* IE
 
 ## Copyright and license
 
 Code and documentation copyright 2019 [Trezy.com][trezy.com]. Code released under the MIT License. Docs released under Creative Commons.
 
-## Development
-
-If you'd like to help us out with the project, we welcome contributions of all types! Check out our [`CONTRIBUTING.md`][contributing-document] for more details on how you can help make NES.css amazing!
 
 
 
