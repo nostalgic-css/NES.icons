@@ -39,11 +39,11 @@ Import the CSS via a `<link />` element:
 
 NES.css only provides components. You will need to define your own layout.
 
-The recommended font for NES.css is [Press Start 2P][press-start-2p-font]. However, [Press Start 2P][press-start-2p-font] only supports English characters. When you're using this framework with any language other than English, please use another font. Follow the Google Fonts [instructions][google-fonts-guide] about how to include them, or simply include it as below:
+The recommended font for NES.css is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P). However, [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) only supports English characters. When you're using this framework with any language other than English, please use another font. Follow the Google Fonts instructions about how to include them, or simply include it as below:
 
 ```html
 <head>
-    <link href="https://unpkg.com/nes.icons/css/nes-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 ```
 
