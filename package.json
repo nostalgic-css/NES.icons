@@ -36,7 +36,7 @@
     "cheerio": "^1.0.0-rc.3",
     "commander": "^2.20.0",
     "doiuse": "^4.2.0",
-    "file-type": "^11.1.0",
+    "file-type": "^16.5.4",
     "flood-fill": "^0.1.1",
     "git-rev-sync": "^1.12.0",
     "listr": "^0.14.3",
